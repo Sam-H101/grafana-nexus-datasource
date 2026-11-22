@@ -1,0 +1,532 @@
+{
+ "version": "4.0.0",
+ "gauges": {
+  "jvm.memory.heap.committed": {
+   "value": 2835349504
+  },
+  "jvm.memory.heap.init": {
+   "value": 2835349504
+  },
+  "jvm.memory.heap.max": {
+   "value": 2835349504
+  },
+  "jvm.memory.heap.usage": {
+   "value": 0.3309557875232584
+  },
+  "jvm.memory.heap.used": {
+   "value": 938375328
+  },
+  "jvm.thread-states.count": {
+   "value": 85
+  },
+  "jvm.thread-states.deadlocks": {
+   "value": []
+  },
+  "jvm.vm.name": {
+   "value": "1@d6d2dd25272d"
+  },
+  "jvm.vm.uptime": {
+   "value": 676623
+  },
+  "nexus.analytics.bytes_transferred_by_format": {
+   "value": [
+    {
+     "apt": {
+      "bytes_downloaded": 0,
+      "bytes_uploaded": 0
+     }
+    },
+    {
+     "maven2": {
+      "bytes_downloaded": 27018,
+      "bytes_uploaded": 40140
+     }
+    },
+    {
+     "raw": {
+      "bytes_downloaded": 5000,
+      "bytes_uploaded": 30000
+     }
+    },
+    {
+     "oci": {
+      "bytes_downloaded": 0,
+      "bytes_uploaded": 0
+     }
+    },
+    {
+     "alpine": {
+      "bytes_downloaded": 0,
+      "bytes_uploaded": 0
+     }
+    },
+    {
+     "ansiblegalaxy": {
+      "bytes_downloaded": 0,
+      "bytes_uploaded": 0
+     }
+    },
+    {
+     "cargo": {
+      "bytes_downloaded": 0,
+      "bytes_uploaded": 0
+     }
+    },
+    {
+     "cocoapods": {
+      "bytes_downloaded": 0,
+      "bytes_uploaded": 0
+     }
+    },
+    {
+     "composer": {
+      "bytes_downloaded": 0,
+      "bytes_uploaded": 0
+     }
+    },
+    {
+     "conan": {
+      "bytes_downloaded": 0,
+      "bytes_uploaded": 0
+     }
+    },
+    {
+     "conda": {
+      "bytes_downloaded": 0,
+      "bytes_uploaded": 0
+     }
+    },
+    {
+     "docker": {
+      "bytes_downloaded": 0,
+      "bytes_uploaded": 0
+     }
+    },
+    {
+     "gitlfs": {
+      "bytes_downloaded": 0,
+      "bytes_uploaded": 0
+     }
+    },
+    {
+     "go": {
+      "bytes_downloaded": 0,
+      "bytes_uploaded": 0
+     }
+    },
+    {
+     "helm": {
+      "bytes_downloaded": 0,
+      "bytes_uploaded": 0
+     }
+    },
+    {
+     "huggingface": {
+      "bytes_downloaded": 0,
+      "bytes_uploaded": 0
+     }
+    },
+    {
+     "npm": {
+      "bytes_downloaded": 0,
+      "bytes_uploaded": 0
+     }
+    },
+    {
+     "nuget": {
+      "bytes_downloaded": 0,
+      "bytes_uploaded": 0
+     }
+    },
+    {
+     "openvsx": {
+      "bytes_downloaded": 0,
+      "bytes_uploaded": 0
+     }
+    },
+    {
+     "p2": {
+      "bytes_downloaded": 0,
+      "bytes_uploaded": 0
+     }
+    },
+    {
+     "pypi": {
+      "bytes_downloaded": 0,
+      "bytes_uploaded": 0
+     }
+    },
+    {
+     "pub": {
+      "bytes_downloaded": 0,
+      "bytes_uploaded": 0
+     }
+    },
+    {
+     "r": {
+      "bytes_downloaded": 0,
+      "bytes_uploaded": 0
+     }
+    },
+    {
+     "rubygems": {
+      "bytes_downloaded": 0,
+      "bytes_uploaded": 0
+     }
+    },
+    {
+     "swift": {
+      "bytes_downloaded": 0,
+      "bytes_uploaded": 0
+     }
+    },
+    {
+     "terraform": {
+      "bytes_downloaded": 0,
+      "bytes_uploaded": 0
+     }
+    },
+    {
+     "yum": {
+      "bytes_downloaded": 0,
+      "bytes_uploaded": 0
+     }
+    }
+   ]
+  },
+  "nexus.analytics.component_total_count": {
+   "value": 8
+  },
+  "nexus.analytics.edition": {
+   "value": "COMMUNITY"
+  },
+  "nexus.analytics.edition_id": {
+   "value": "nexus-community-edition"
+  },
+  "nexus.analytics.repository_asset_count_by_format_type": {
+   "value": [
+    {
+     "format": "nugetv3",
+     "type": "proxy",
+     "count": 0
+    },
+    {
+     "format": "nugetv3",
+     "type": "group",
+     "count": 0
+    },
+    {
+     "format": "nugetv3",
+     "type": "hosted",
+     "count": 0
+    },
+    {
+     "format": "maven2",
+     "type": "proxy",
+     "count": 1
+    },
+    {
+     "format": "maven2",
+     "type": "hosted",
+     "count": 5
+    },
+    {
+     "format": "maven2",
+     "type": "group",
+     "count": 0
+    },
+    {
+     "format": "npm",
+     "type": "proxy",
+     "count": 0
+    },
+    {
+     "format": "raw",
+     "type": "hosted",
+     "count": 3
+    }
+   ]
+  },
+  "nexus.analytics.repository_component_count_by_format_type": {
+   "value": [
+    {
+     "format": "nugetv3",
+     "type": "proxy",
+     "count": 0
+    },
+    {
+     "format": "nugetv3",
+     "type": "group",
+     "count": 0
+    },
+    {
+     "format": "nugetv3",
+     "type": "hosted",
+     "count": 0
+    },
+    {
+     "format": "maven2",
+     "type": "proxy",
+     "count": 1
+    },
+    {
+     "format": "maven2",
+     "type": "hosted",
+     "count": 4
+    },
+    {
+     "format": "maven2",
+     "type": "group",
+     "count": 0
+    },
+    {
+     "format": "npm",
+     "type": "proxy",
+     "count": 0
+    },
+    {
+     "format": "raw",
+     "type": "hosted",
+     "count": 3
+    }
+   ]
+  },
+  "nexus.analytics.repository_global_distribution_enabled_count": {
+   "value": 0
+  },
+  "nexus.analytics.repository_proxy_count": {
+   "value": 3
+  },
+  "nexus.analytics.repository_proxy_preemptive_count": {
+   "value": 0
+  },
+  "nexus.analytics.repository_sizes": {
+   "value": []
+  },
+  "nexus.analytics.repository_total_count": {
+   "value": 10
+  },
+  "nexus.analytics.repository_type_counts": {
+   "value": [
+    {
+     "format": "nugetv3",
+     "type": "proxy",
+     "count": 1
+    },
+    {
+     "format": "nugetv3",
+     "type": "group",
+     "count": 1
+    },
+    {
+     "format": "nugetv3",
+     "type": "hosted",
+     "count": 1
+    },
+    {
+     "format": "maven2",
+     "type": "proxy",
+     "count": 1
+    },
+    {
+     "format": "maven2",
+     "type": "hosted",
+     "count": 2
+    },
+    {
+     "format": "maven2",
+     "type": "group",
+     "count": 1
+    },
+    {
+     "format": "npm",
+     "type": "proxy",
+     "count": 1
+    },
+    {
+     "format": "raw",
+     "type": "hosted",
+     "count": 2
+    }
+   ]
+  },
+  "org.sonatype.nexus.internal.metrics.ReadOnlyMetricSet.enabled": {
+   "value": false
+  },
+  "org.sonatype.nexus.internal.metrics.ReadOnlyMetricSet.freezeTime": {
+   "value": 0
+  },
+  "org.sonatype.nexus.internal.metrics.ReadOnlyMetricSet.pending": {
+   "value": 0
+  }
+ },
+ "counters": {
+  "bytes_downloaded_by_format_maven2": {
+   "count": 27018
+  },
+  "org.sonatype.nexus.metrics.InstrumentedFilter.activeRequests": {
+   "count": 1
+  }
+ },
+ "histograms": {},
+ "meters": {
+  "org.eclipse.jetty.ee10.webapp.WebAppContext.2xx-responses": {
+   "count": 100,
+   "m15_rate": 0.2606434861382759,
+   "m1_rate": 0.23025682185888313,
+   "m5_rate": 0.14083165211020304,
+   "mean_rate": 0.15759276315734433,
+   "units": "events/second"
+  },
+  "org.sonatype.nexus.metrics.InstrumentedFilter.errors": {
+   "count": 0,
+   "m15_rate": 0.0,
+   "m1_rate": 0.0,
+   "m5_rate": 0.0,
+   "mean_rate": 0.0,
+   "units": "events/second"
+  },
+  "org.sonatype.nexus.metrics.InstrumentedFilter.responseCodes.badRequest": {
+   "count": 12,
+   "m15_rate": 0.009055483739253078,
+   "m1_rate": 0.061517830662910465,
+   "m5_rate": 0.016904856409701838,
+   "mean_rate": 0.018880006915039164,
+   "units": "events/second"
+  },
+  "org.sonatype.nexus.metrics.InstrumentedFilter.responseCodes.created": {
+   "count": 11,
+   "m15_rate": 0.008900008919781006,
+   "m1_rate": 0.06227461847232933,
+   "m5_rate": 0.018497697834741034,
+   "mean_rate": 0.017306673062633834,
+   "units": "events/second"
+  },
+  "org.sonatype.nexus.metrics.InstrumentedFilter.responseCodes.noContent": {
+   "count": 7,
+   "m15_rate": 0.0048260249796972824,
+   "m1_rate": 0.012472434387191915,
+   "m5_rate": 0.006677270616116757,
+   "mean_rate": 0.011013337484934247,
+   "units": "events/second"
+  },
+  "org.sonatype.nexus.metrics.InstrumentedFilter.responseCodes.notFound": {
+   "count": 2,
+   "m15_rate": 0.0011611103977819844,
+   "m1_rate": 2.335869998747641e-06,
+   "m5_rate": 0.0009559246359294876,
+   "mean_rate": 0.003146667839966382,
+   "units": "events/second"
+  },
+  "org.sonatype.nexus.metrics.InstrumentedFilter.responseCodes.ok": {
+   "count": 82,
+   "m15_rate": 0.24558213992373462,
+   "m1_rate": 0.14900575750394282,
+   "m5_rate": 0.11401320565041051,
+   "mean_rate": 0.1290133738065317,
+   "units": "events/second"
+  },
+  "org.sonatype.nexus.metrics.InstrumentedFilter.responseCodes.other": {
+   "count": 51,
+   "m15_rate": 0.03323286651321652,
+   "m1_rate": 0.06163226533480401,
+   "m5_rate": 0.039578242747528254,
+   "mean_rate": 0.08024003008326043,
+   "units": "events/second"
+  },
+  "org.sonatype.nexus.metrics.InstrumentedFilter.responseCodes.serverError": {
+   "count": 0,
+   "m15_rate": 0.0,
+   "m1_rate": 0.0,
+   "m5_rate": 0.0,
+   "mean_rate": 0.0,
+   "units": "events/second"
+  },
+  "org.sonatype.nexus.metrics.InstrumentedFilter.timeouts": {
+   "count": 0,
+   "m15_rate": 0.0,
+   "m1_rate": 0.0,
+   "m5_rate": 0.0,
+   "mean_rate": 0.0,
+   "units": "events/second"
+  }
+ },
+ "timers": {
+  "org.eclipse.jetty.ee10.webapp.WebAppContext.requests": {
+   "count": 165,
+   "max": 20.395,
+   "mean": 0.013587374351821141,
+   "min": 0.001,
+   "p50": 0.007,
+   "p75": 0.015000000000000001,
+   "p95": 0.043000000000000003,
+   "p98": 0.158,
+   "p99": 0.158,
+   "p999": 0.158,
+   "stddev": 0.056596287200416796,
+   "m15_rate": 0.2976399725491282,
+   "m1_rate": 0.2598265322053332,
+   "m5_rate": 0.1790436159261361,
+   "mean_rate": 0.2600270530780644,
+   "duration_units": "seconds",
+   "rate_units": "calls/second"
+  },
+  "org.sonatype.nexus.blobstore.file.FileBlobStore.create.timer": {
+   "count": 72,
+   "max": 0.039730310000000005,
+   "mean": 0.004151797577364202,
+   "min": 0.0006003940000000001,
+   "p50": 0.0010174890000000001,
+   "p75": 0.002090377,
+   "p95": 0.035928113000000005,
+   "p98": 0.037048901,
+   "p99": 0.037048901,
+   "p999": 0.037048901,
+   "stddev": 0.00950015083925338,
+   "m15_rate": 3.144868663504105,
+   "m1_rate": 0.040974544409410535,
+   "m5_rate": 0.8708879712757984,
+   "mean_rate": 0.12111759980831537,
+   "duration_units": "seconds",
+   "rate_units": "calls/second"
+  },
+  "org.sonatype.nexus.blobstore.file.FileBlobStore.get.timer": {
+   "count": 22,
+   "max": 0.00048489500000000005,
+   "mean": 8.4771887743101e-05,
+   "min": 5.55e-05,
+   "p50": 8.5599e-05,
+   "p75": 0.000105599,
+   "p95": 0.00010879900000000001,
+   "p98": 0.00010879900000000001,
+   "p99": 0.00010879900000000001,
+   "p999": 0.00010879900000000001,
+   "stddev": 1.7887465045077317e-05,
+   "m15_rate": 0.015209700843417768,
+   "m1_rate": 0.08123014418851582,
+   "m5_rate": 0.026137704394662266,
+   "mean_rate": 0.033160114061574646,
+   "duration_units": "seconds",
+   "rate_units": "calls/second"
+  },
+  "org.sonatype.nexus.metrics.InstrumentedFilter.requests": {
+   "count": 165,
+   "max": 20.394058323000003,
+   "mean": 0.013009945470355796,
+   "min": 0.000364796,
+   "p50": 0.00649393,
+   "p75": 0.01389985,
+   "p95": 0.042499641000000005,
+   "p98": 0.156785207,
+   "p99": 0.156785207,
+   "p999": 0.156785207,
+   "stddev": 0.056554568270809076,
+   "m15_rate": 0.3027576344734645,
+   "m1_rate": 0.3469052422311773,
+   "m5_rate": 0.19662719789442787,
+   "mean_rate": 0.25959875469238225,
+   "duration_units": "seconds",
+   "rate_units": "calls/second"
+  }
+ }
+}

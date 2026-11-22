@@ -1,0 +1,40 @@
+{
+  "$schema": "https://raw.githubusercontent.com/grafana/grafana/main/docs/sources/developers/plugins/plugin.schema.json",
+  "type": "datasource",
+  "name": "Nexus Repository",
+  "id": "smartquinoa1504-nexus-datasource",
+  "metrics": true,
+  "annotations": true,
+  "alerting": true,
+  "backend": true,
+  "executable": "gpx_nexus",
+  "info": {
+    "description": "Sonatype Nexus Repository 3: repositories, blob store capacity, components and assets, tasks, health checks, usage and internal metrics.",
+    "author": {
+      "name": "Sam H",
+      "url": "https://github.com/Sam-H101"
+    },
+    "keywords": ["datasource", "nexus", "sonatype", "repository", "artifacts", "maven", "npm", "docker", "blob store"],
+    "logos": {
+      "small": "img/logo.svg",
+      "large": "img/logo.svg"
+    },
+    "links": [
+      { "name": "Source code", "url": "https://github.com/Sam-H101/grafana-nexus-datasource" },
+      { "name": "Documentation", "url": "https://github.com/Sam-H101/grafana-nexus-datasource#readme" },
+      { "name": "Report an issue", "url": "https://github.com/Sam-H101/grafana-nexus-datasource/issues" },
+      { "name": "Licence (Apache-2.0)", "url": "https://github.com/Sam-H101/grafana-nexus-datasource/blob/master/LICENSE" }
+    ],
+    "screenshots": [
+      { "name": "Dashboard", "path": "img/screenshots/dashboard.png" },
+      { "name": "Query editor", "path": "img/screenshots/query-editor.png" },
+      { "name": "Configuration", "path": "img/screenshots/config-editor.png" }
+    ],
+    "version": "%VERSION%",
+    "updated": "%TODAY%"
+  },
+  "dependencies": {
+    "grafanaDependency": ">=13.2.0",
+    "plugins": []
+  }
+}

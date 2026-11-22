@@ -1,0 +1,22 @@
+[ {
+  "softQuota" : null,
+  "name" : "default",
+  "type" : "File",
+  "unavailable" : false,
+  "blobCount" : 49,
+  "totalSizeInBytes" : 902286,
+  "availableSpaceInBytes" : 855687114752,
+  "globalDistributionEnabled" : false
+}, {
+  "softQuota" : {
+    "type" : "spaceUsedQuota",
+    "limit" : 10737418240
+  },
+  "name" : "artifacts",
+  "type" : "File",
+  "unavailable" : false,
+  "blobCount" : 0,
+  "totalSizeInBytes" : 0,
+  "availableSpaceInBytes" : 855687114752,
+  "globalDistributionEnabled" : false
+} ]

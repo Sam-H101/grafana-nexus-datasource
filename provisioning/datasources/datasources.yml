@@ -1,0 +1,43 @@
+apiVersion: 1
+
+# Data sources for the dev stack (docker-compose.yaml). The users and their
+# passwords are created by the seed service and read from its volume.
+datasources:
+  - name: Nexus
+    type: smartquinoa1504-nexus-datasource
+    uid: nexus-dev
+    access: proxy
+    url: http://nexus:8081
+    isDefault: true
+    editable: true
+    jsonData:
+      username: grafana
+    secureJsonData:
+      password: $__file{/run/nexus/password}
+
+  # The same server, reachable only through the socks proxy that stands in
+  # for Grafana Cloud's Private data source connect.
+  - name: Nexus (private network)
+    type: smartquinoa1504-nexus-datasource
+    uid: nexus-pdc
+    access: proxy
+    url: http://nexus-private:8081
+    editable: true
+    jsonData:
+      username: grafana
+      enableSecureSocksProxy: true
+    secureJsonData:
+      password: $__file{/run/nexus/password}
+
+  # A user that may only browse and search: blob stores, tasks, health
+  # checks, usage and metrics are refused.
+  - name: Nexus (limited user)
+    type: smartquinoa1504-nexus-datasource
+    uid: nexus-limited
+    access: proxy
+    url: http://nexus:8081
+    editable: true
+    jsonData:
+      username: grafana-limited
+    secureJsonData:
+      password: $__file{/run/nexus/limited-password}

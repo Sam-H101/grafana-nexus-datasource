@@ -1,0 +1,240 @@
+[ {
+  "name" : "docs-archive",
+  "url" : "https://nexus.example.com/repository/docs-archive",
+  "online" : false,
+  "storage" : {
+    "blobStoreName" : "artifacts",
+    "strictContentTypeValidation" : false,
+    "writePolicy" : "DENY"
+  },
+  "cleanup" : null,
+  "component" : {
+    "proprietaryComponents" : false
+  },
+  "raw" : {
+    "contentDisposition" : "ATTACHMENT"
+  },
+  "format" : "raw",
+  "type" : "hosted"
+}, {
+  "name" : "npm-proxy",
+  "url" : "https://nexus.example.com/repository/npm-proxy",
+  "online" : true,
+  "storage" : {
+    "blobStoreName" : "default",
+    "strictContentTypeValidation" : true,
+    "writePolicy" : "ALLOW"
+  },
+  "cleanup" : null,
+  "proxy" : {
+    "remoteUrl" : "https://registry.npmjs.org",
+    "contentMaxAge" : 1440,
+    "metadataMaxAge" : 1440,
+    "preserveEncodedCharacters" : false
+  },
+  "negativeCache" : {
+    "enabled" : true,
+    "timeToLive" : 1440
+  },
+  "httpClient" : {
+    "blocked" : false,
+    "autoBlock" : true,
+    "connection" : {
+      "retries" : null,
+      "userAgentSuffix" : null,
+      "timeout" : null,
+      "enableCircularRedirects" : false,
+      "enableCookies" : false,
+      "useTrustStore" : false
+    },
+    "authentication" : null
+  },
+  "routingRuleName" : null,
+  "npm" : {
+    "removeQuarantinedVersions" : false
+  },
+  "format" : "npm",
+  "type" : "proxy"
+}, {
+  "name" : "maven-snapshots",
+  "url" : "https://nexus.example.com/repository/maven-snapshots",
+  "online" : true,
+  "storage" : {
+    "blobStoreName" : "default",
+    "strictContentTypeValidation" : false,
+    "writePolicy" : "ALLOW"
+  },
+  "cleanup" : null,
+  "maven" : {
+    "versionPolicy" : "SNAPSHOT",
+    "layoutPolicy" : "STRICT",
+    "contentDisposition" : "ATTACHMENT"
+  },
+  "component" : {
+    "proprietaryComponents" : false
+  },
+  "format" : "maven2",
+  "type" : "hosted"
+}, {
+  "name" : "maven-central",
+  "url" : "https://nexus.example.com/repository/maven-central",
+  "online" : true,
+  "storage" : {
+    "blobStoreName" : "default",
+    "strictContentTypeValidation" : false,
+    "writePolicy" : "ALLOW"
+  },
+  "cleanup" : null,
+  "proxy" : {
+    "remoteUrl" : "https://repo1.maven.org/maven2/",
+    "contentMaxAge" : -1,
+    "metadataMaxAge" : 1440,
+    "preserveEncodedCharacters" : false
+  },
+  "negativeCache" : {
+    "enabled" : true,
+    "timeToLive" : 1440
+  },
+  "httpClient" : {
+    "blocked" : false,
+    "autoBlock" : false,
+    "connection" : {
+      "retries" : null,
+      "userAgentSuffix" : null,
+      "timeout" : null,
+      "enableCircularRedirects" : false,
+      "enableCookies" : false,
+      "useTrustStore" : false
+    },
+    "authentication" : null
+  },
+  "routingRuleName" : null,
+  "maven" : {
+    "versionPolicy" : "RELEASE",
+    "layoutPolicy" : "PERMISSIVE",
+    "contentDisposition" : "ATTACHMENT"
+  },
+  "format" : "maven2",
+  "type" : "proxy"
+}, {
+  "name" : "nuget-group",
+  "format" : "nuget",
+  "url" : "https://nexus.example.com/repository/nuget-group",
+  "online" : true,
+  "storage" : {
+    "blobStoreName" : "default",
+    "strictContentTypeValidation" : true
+  },
+  "group" : {
+    "memberNames" : [ "nuget-hosted", "nuget.org-proxy" ]
+  },
+  "type" : "group"
+}, {
+  "name" : "maven-releases",
+  "url" : "https://nexus.example.com/repository/maven-releases",
+  "online" : true,
+  "storage" : {
+    "blobStoreName" : "default",
+    "strictContentTypeValidation" : false,
+    "writePolicy" : "ALLOW_ONCE"
+  },
+  "cleanup" : null,
+  "maven" : {
+    "versionPolicy" : "RELEASE",
+    "layoutPolicy" : "STRICT",
+    "contentDisposition" : "ATTACHMENT"
+  },
+  "component" : {
+    "proprietaryComponents" : false
+  },
+  "format" : "maven2",
+  "type" : "hosted"
+}, {
+  "name" : "nuget.org-proxy",
+  "url" : "https://nexus.example.com/repository/nuget.org-proxy",
+  "online" : true,
+  "storage" : {
+    "blobStoreName" : "default",
+    "strictContentTypeValidation" : true,
+    "writePolicy" : "ALLOW"
+  },
+  "cleanup" : null,
+  "proxy" : {
+    "remoteUrl" : "https://api.nuget.org/v3/index.json",
+    "contentMaxAge" : 1440,
+    "metadataMaxAge" : 1440,
+    "preserveEncodedCharacters" : false
+  },
+  "negativeCache" : {
+    "enabled" : true,
+    "timeToLive" : 1440
+  },
+  "httpClient" : {
+    "blocked" : false,
+    "autoBlock" : false,
+    "connection" : {
+      "retries" : null,
+      "userAgentSuffix" : null,
+      "timeout" : null,
+      "enableCircularRedirects" : false,
+      "enableCookies" : false,
+      "useTrustStore" : false
+    },
+    "authentication" : null
+  },
+  "routingRuleName" : null,
+  "nugetProxy" : {
+    "queryCacheItemMaxAge" : 3600,
+    "nugetVersion" : "V3",
+    "symbolServerUrl" : null,
+    "allowAnonymousSymbolAccess" : true
+  },
+  "format" : "nuget",
+  "type" : "proxy"
+}, {
+  "name" : "maven-public",
+  "format" : "maven2",
+  "url" : "https://nexus.example.com/repository/maven-public",
+  "online" : true,
+  "storage" : {
+    "blobStoreName" : "default",
+    "strictContentTypeValidation" : false
+  },
+  "group" : {
+    "memberNames" : [ "maven-releases", "maven-snapshots", "maven-central" ]
+  },
+  "type" : "group"
+}, {
+  "name" : "nuget-hosted",
+  "format" : "nuget",
+  "url" : "https://nexus.example.com/repository/nuget-hosted",
+  "online" : true,
+  "storage" : {
+    "blobStoreName" : "default",
+    "strictContentTypeValidation" : true,
+    "writePolicy" : "ALLOW"
+  },
+  "cleanup" : null,
+  "component" : {
+    "proprietaryComponents" : false
+  },
+  "type" : "hosted"
+}, {
+  "name" : "raw-hosted",
+  "url" : "https://nexus.example.com/repository/raw-hosted",
+  "online" : true,
+  "storage" : {
+    "blobStoreName" : "default",
+    "strictContentTypeValidation" : false,
+    "writePolicy" : "ALLOW"
+  },
+  "cleanup" : null,
+  "component" : {
+    "proprietaryComponents" : false
+  },
+  "raw" : {
+    "contentDisposition" : "ATTACHMENT"
+  },
+  "format" : "raw",
+  "type" : "hosted"
+} ]

@@ -1,0 +1,118 @@
+apiVersion: 1
+
+# Example rules for the dev stack. The first stays Normal on a healthy Nexus;
+# the second fires, to show a rule built on a count (the sample Nexus holds
+# more than five components).
+groups:
+  - orgId: 1
+    name: nexus-examples
+    folder: Nexus Repository
+    interval: 1m
+    rules:
+      - uid: nexus-heap-high
+        title: Nexus Java heap above 90%
+        condition: C
+        for: 5m
+        noDataState: NoData
+        execErrState: Error
+        annotations:
+          summary: 'Nexus is using more than 90% of its Java heap.'
+        data:
+          - refId: A
+            relativeTimeRange:
+              from: 600
+              to: 0
+            datasourceUid: nexus-dev
+            model:
+              refId: A
+              queryType: metrics
+              metrics: ['jvm.memory.heap.usage']
+          - refId: B
+            datasourceUid: __expr__
+            model:
+              refId: B
+              type: reduce
+              expression: A
+              reducer: last
+          - refId: C
+            datasourceUid: __expr__
+            model:
+              refId: C
+              type: threshold
+              expression: B
+              conditions:
+                - evaluator:
+                    type: gt
+                    params: [0.9]
+
+      - uid: nexus-blob-store-space
+        title: Blob store disk almost full
+        condition: C
+        for: 5m
+        noDataState: NoData
+        execErrState: Error
+        annotations:
+          summary: 'Less than 1 GiB is free for the blob store {{ $labels.blob_store }}.'
+        data:
+          - refId: A
+            relativeTimeRange:
+              from: 600
+              to: 0
+            datasourceUid: nexus-dev
+            model:
+              refId: A
+              queryType: blobStores
+              blobStoreValue: free
+          - refId: B
+            datasourceUid: __expr__
+            model:
+              refId: B
+              type: reduce
+              expression: A
+              reducer: last
+          - refId: C
+            datasourceUid: __expr__
+            model:
+              refId: C
+              type: threshold
+              expression: B
+              conditions:
+                - evaluator:
+                    type: lt
+                    params: [1073741824]
+
+      - uid: nexus-component-count
+        title: More than 5 components stored
+        condition: C
+        for: 0s
+        noDataState: NoData
+        execErrState: Error
+        annotations:
+          summary: 'Nexus holds {{ $values.B.Value }} components.'
+        data:
+          - refId: A
+            relativeTimeRange:
+              from: 600
+              to: 0
+            datasourceUid: nexus-dev
+            model:
+              refId: A
+              queryType: metrics
+              metrics: ['nexus.analytics.component_total_count']
+          - refId: B
+            datasourceUid: __expr__
+            model:
+              refId: B
+              type: reduce
+              expression: A
+              reducer: last
+          - refId: C
+            datasourceUid: __expr__
+            model:
+              refId: C
+              type: threshold
+              expression: B
+              conditions:
+                - evaluator:
+                    type: gt
+                    params: [5]

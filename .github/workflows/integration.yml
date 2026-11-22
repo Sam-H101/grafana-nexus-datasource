@@ -1,0 +1,64 @@
+name: Integration tests
+
+# Backend tests against a live Nexus Repository with seeded repositories and
+# artifacts, started from the same docker-compose.yaml as the dev stack.
+on:
+  push:
+    branches:
+      - master
+      - main
+  pull_request:
+    branches:
+      - master
+      - main
+  # Allows a run to be started by hand from the Actions tab.
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  integration:
+    name: Go integration tests against ${{ matrix.nexus }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    strategy:
+      fail-fast: false
+      matrix:
+        # The Community Edition version the plugin is developed against.
+        nexus:
+          - sonatype/nexus3:3.98.3
+    env:
+      NEXUS_IMAGE: ${{ matrix.nexus }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Setup Go environment
+        uses: actions/setup-go@v7
+        with:
+          go-version-file: go.mod
+
+      - name: Start Nexus and seed it
+        run: |
+          docker compose up -d --wait nexus
+          docker compose up --exit-code-from seed seed
+          mkdir -p "$RUNNER_TEMP/nexus-seed"
+          for f in password limited-password; do
+            docker compose run --rm --no-deps -T --entrypoint cat seed "/seed-out/$f" > "$RUNNER_TEMP/nexus-seed/$f"
+          done
+
+      - name: Run integration tests
+        env:
+          NEXUS_URL: http://localhost:8081
+          NEXUS_SEED_DIR: ${{ runner.temp }}/nexus-seed
+        run: go test -tags integration -race -count=1 -v ./tests/integration/...
+
+      - name: Nexus logs
+        if: failure()
+        run: docker compose logs nexus seed | tail -n 300
+
+      - name: Stop Nexus
+        if: always()
+        run: docker compose down -v

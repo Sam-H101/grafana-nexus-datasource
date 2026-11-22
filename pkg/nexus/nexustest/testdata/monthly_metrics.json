@@ -1,0 +1,24 @@
+[
+ {
+  "requestCount": 41200,
+  "componentCount": 455,
+  "peakStorage": 7340032,
+  "responseSize": 913000000,
+  "metricDate": "2026-10-01T00:00:00Z",
+  "percentageChangeRequest": "N/A",
+  "percentageChangeComponent": "N/A",
+  "percentageChangeEgress": "N/A",
+  "percentageChangeStorage": "N/A"
+ },
+ {
+  "requestCount": 7380,
+  "componentCount": 512,
+  "peakStorage": 8672860,
+  "responseSize": 120500000,
+  "metricDate": "2026-11-01T00:00:00Z",
+  "percentageChangeRequest": "-82%",
+  "percentageChangeComponent": "13%",
+  "percentageChangeEgress": "-87%",
+  "percentageChangeStorage": "18%"
+ }
+]

@@ -1,0 +1,672 @@
+{
+  "uid": "nexus-overview",
+  "title": "Nexus Repository overview",
+  "tags": [
+    "nexus"
+  ],
+  "timezone": "browser",
+  "schemaVersion": 41,
+  "version": 1,
+  "editable": true,
+  "graphTooltip": 0,
+  "time": {
+    "from": "now-30d",
+    "to": "now"
+  },
+  "refresh": "",
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "templating": {
+    "list": [
+      {
+        "name": "format",
+        "label": "Format",
+        "type": "query",
+        "datasource": {
+          "type": "smartquinoa1504-nexus-datasource",
+          "uid": "nexus-dev"
+        },
+        "query": {
+          "refId": "variable",
+          "list": "formats"
+        },
+        "includeAll": true,
+        "multi": false,
+        "refresh": 1,
+        "sort": 1,
+        "current": {
+          "text": "All",
+          "value": "$__all"
+        }
+      },
+      {
+        "name": "repository",
+        "label": "Repository",
+        "type": "query",
+        "datasource": {
+          "type": "smartquinoa1504-nexus-datasource",
+          "uid": "nexus-dev"
+        },
+        "query": {
+          "refId": "variable",
+          "list": "repositories",
+          "format": "$format"
+        },
+        "includeAll": true,
+        "multi": true,
+        "refresh": 2,
+        "sort": 1,
+        "current": {
+          "text": [
+            "All"
+          ],
+          "value": [
+            "$__all"
+          ]
+        }
+      }
+    ]
+  },
+  "panels": [
+    {
+      "id": 1,
+      "title": "Repositories",
+      "description": "",
+      "type": "stat",
+      "datasource": {
+        "type": "smartquinoa1504-nexus-datasource",
+        "uid": "nexus-dev"
+      },
+      "gridPos": {
+        "x": 0,
+        "y": 0,
+        "w": 6,
+        "h": 4
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "smartquinoa1504-nexus-datasource",
+            "uid": "nexus-dev"
+          },
+          "queryType": "metrics",
+          "metrics": [
+            "nexus.analytics.repository_total_count"
+          ]
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "fixed",
+            "fixedColor": "blue"
+          }
+        },
+        "overrides": []
+      },
+      "options": {
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "colorMode": "value",
+        "graphMode": "none",
+        "textMode": "value"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Components",
+      "description": "",
+      "type": "stat",
+      "datasource": {
+        "type": "smartquinoa1504-nexus-datasource",
+        "uid": "nexus-dev"
+      },
+      "gridPos": {
+        "x": 6,
+        "y": 0,
+        "w": 6,
+        "h": 4
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "smartquinoa1504-nexus-datasource",
+            "uid": "nexus-dev"
+          },
+          "queryType": "metrics",
+          "metrics": [
+            "nexus.analytics.component_total_count"
+          ]
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "fixed",
+            "fixedColor": "blue"
+          }
+        },
+        "overrides": []
+      },
+      "options": {
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "colorMode": "value",
+        "graphMode": "none",
+        "textMode": "value"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Heap in use",
+      "description": "Share of the Java heap Nexus is using.",
+      "type": "stat",
+      "datasource": {
+        "type": "smartquinoa1504-nexus-datasource",
+        "uid": "nexus-dev"
+      },
+      "gridPos": {
+        "x": 12,
+        "y": 0,
+        "w": 6,
+        "h": 4
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "smartquinoa1504-nexus-datasource",
+            "uid": "nexus-dev"
+          },
+          "queryType": "metrics",
+          "metrics": [
+            "jvm.memory.heap.usage"
+          ]
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds",
+            "fixedColor": "blue"
+          },
+          "unit": "percentunit",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "orange",
+                "value": 0.8
+              },
+              {
+                "color": "red",
+                "value": 0.9
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "options": {
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "colorMode": "value",
+        "graphMode": "none",
+        "textMode": "value"
+      }
+    },
+    {
+      "id": 4,
+      "title": "Requests in progress",
+      "description": "",
+      "type": "stat",
+      "datasource": {
+        "type": "smartquinoa1504-nexus-datasource",
+        "uid": "nexus-dev"
+      },
+      "gridPos": {
+        "x": 18,
+        "y": 0,
+        "w": 6,
+        "h": 4
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "smartquinoa1504-nexus-datasource",
+            "uid": "nexus-dev"
+          },
+          "queryType": "metrics",
+          "metrics": [
+            "org.sonatype.nexus.metrics.InstrumentedFilter.activeRequests"
+          ]
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "fixed",
+            "fixedColor": "blue"
+          }
+        },
+        "overrides": []
+      },
+      "options": {
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "colorMode": "value",
+        "graphMode": "none",
+        "textMode": "value"
+      }
+    },
+    {
+      "id": 5,
+      "title": "Failing health checks",
+      "description": "The system status checks that fail. Empty when all pass.",
+      "type": "table",
+      "datasource": {
+        "type": "smartquinoa1504-nexus-datasource",
+        "uid": "nexus-dev"
+      },
+      "gridPos": {
+        "x": 16,
+        "y": 4,
+        "w": 8,
+        "h": 6
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "smartquinoa1504-nexus-datasource",
+            "uid": "nexus-dev"
+          },
+          "queryType": "healthChecks",
+          "unhealthyOnly": true
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "options": {
+        "showHeader": false
+      },
+      "transformations": [
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "healthy": true,
+              "checked": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Blob stores",
+      "description": "Size and free space of each blob store.",
+      "type": "table",
+      "datasource": {
+        "type": "smartquinoa1504-nexus-datasource",
+        "uid": "nexus-dev"
+      },
+      "gridPos": {
+        "x": 0,
+        "y": 4,
+        "w": 8,
+        "h": 6
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "smartquinoa1504-nexus-datasource",
+            "uid": "nexus-dev"
+          },
+          "queryType": "blobStores"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "available"
+            },
+            "properties": [
+              {
+                "id": "custom.cellOptions",
+                "value": {
+                  "type": "color-text"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "options": {
+        "showHeader": true,
+        "cellHeight": "sm"
+      },
+      "transformations": [
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "type": true,
+              "quota_type": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Requests per day",
+      "description": "Requests Nexus served on each of the last days.",
+      "type": "barchart",
+      "datasource": {
+        "type": "smartquinoa1504-nexus-datasource",
+        "uid": "nexus-dev"
+      },
+      "gridPos": {
+        "x": 8,
+        "y": 4,
+        "w": 8,
+        "h": 6
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "smartquinoa1504-nexus-datasource",
+            "uid": "nexus-dev"
+          },
+          "queryType": "usage",
+          "usageMetric": "requests",
+          "usagePeriod": "daily"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "fixed",
+            "fixedColor": "blue"
+          },
+          "custom": {
+            "fillOpacity": 80
+          }
+        },
+        "overrides": []
+      },
+      "options": {
+        "legend": {
+          "showLegend": false
+        },
+        "xTickLabelRotation": 0,
+        "showValue": "auto"
+      }
+    },
+    {
+      "id": 8,
+      "title": "Repository details",
+      "description": "Every repository of the chosen format.",
+      "type": "table",
+      "datasource": {
+        "type": "smartquinoa1504-nexus-datasource",
+        "uid": "nexus-dev"
+      },
+      "gridPos": {
+        "x": 0,
+        "y": 10,
+        "w": 24,
+        "h": 9
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "smartquinoa1504-nexus-datasource",
+            "uid": "nexus-dev"
+          },
+          "queryType": "repositories",
+          "format": "$format"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "online"
+            },
+            "properties": [
+              {
+                "id": "custom.cellOptions",
+                "value": {
+                  "type": "color-text"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "url"
+            },
+            "properties": [
+              {
+                "id": "custom.hidden",
+                "value": true
+              }
+            ]
+          }
+        ]
+      },
+      "options": {
+        "showHeader": true,
+        "cellHeight": "sm"
+      }
+    },
+    {
+      "id": 9,
+      "title": "Component list",
+      "description": "Components in the chosen repositories.",
+      "type": "table",
+      "datasource": {
+        "type": "smartquinoa1504-nexus-datasource",
+        "uid": "nexus-dev"
+      },
+      "gridPos": {
+        "x": 0,
+        "y": 19,
+        "w": 14,
+        "h": 10
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "smartquinoa1504-nexus-datasource",
+            "uid": "nexus-dev"
+          },
+          "queryType": "components",
+          "repositories": [
+            "$repository"
+          ],
+          "format": "$format",
+          "sort": "name",
+          "limit": 200
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "options": {
+        "showHeader": true,
+        "cellHeight": "sm"
+      }
+    },
+    {
+      "id": 10,
+      "title": "Totals by format",
+      "description": "What Nexus holds and has transferred for each format.",
+      "type": "table",
+      "datasource": {
+        "type": "smartquinoa1504-nexus-datasource",
+        "uid": "nexus-dev"
+      },
+      "gridPos": {
+        "x": 14,
+        "y": 19,
+        "w": 10,
+        "h": 10
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "smartquinoa1504-nexus-datasource",
+            "uid": "nexus-dev"
+          },
+          "queryType": "formats"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "options": {
+        "showHeader": true,
+        "cellHeight": "sm"
+      }
+    },
+    {
+      "id": 11,
+      "title": "Tasks",
+      "description": "Scheduled tasks and how their last run went.",
+      "type": "table",
+      "datasource": {
+        "type": "smartquinoa1504-nexus-datasource",
+        "uid": "nexus-dev"
+      },
+      "gridPos": {
+        "x": 0,
+        "y": 29,
+        "w": 14,
+        "h": 9
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "smartquinoa1504-nexus-datasource",
+            "uid": "nexus-dev"
+          },
+          "queryType": "tasks"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "options": {
+        "showHeader": true,
+        "cellHeight": "sm"
+      },
+      "transformations": [
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "id": true,
+              "message": true,
+              "type": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Monthly usage",
+      "description": "Requests, components, peak storage and data served per month.",
+      "type": "table",
+      "datasource": {
+        "type": "smartquinoa1504-nexus-datasource",
+        "uid": "nexus-dev"
+      },
+      "gridPos": {
+        "x": 14,
+        "y": 29,
+        "w": 10,
+        "h": 9
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "smartquinoa1504-nexus-datasource",
+            "uid": "nexus-dev"
+          },
+          "queryType": "monthlyUsage"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "options": {
+        "showHeader": true,
+        "cellHeight": "sm"
+      }
+    }
+  ]
+}

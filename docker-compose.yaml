@@ -1,0 +1,125 @@
+# Dev stack: `docker compose up -d --wait` starts Nexus Repository Community
+# Edition, seeds it with sample repositories and artifacts, and starts
+# Grafana with the plugin.
+# The toolbox (profile "tools") runs builds and tests: see devenv/run.sh.
+services:
+  grafana:
+    extends:
+      file: .config/docker-compose-base.yaml
+      service: grafana
+    build:
+      args:
+        # The version the plugin was tested with; CI overrides it.
+        grafana_version: ${GRAFANA_VERSION:-13.3.1}
+    # Local by default: the dev image grants anonymous Admin. To expose the
+    # stack, set BIND_ADDRESS, ANONYMOUS_AUTH_ENABLED=false and
+    # GRAFANA_ADMIN_PASSWORD (see devenv/README.md).
+    environment:
+      GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_ADMIN_PASSWORD:-admin}
+      # Stands in for Grafana Cloud's Private data source connect: data
+      # sources with "secure socks proxy" on send their requests through the
+      # `socks` service. allow_insecure skips the mutual TLS that the real
+      # service uses, which a local SOCKS proxy cannot offer.
+      GF_SECURE_SOCKS_DATASOURCE_PROXY_ENABLED: 'true'
+      GF_SECURE_SOCKS_DATASOURCE_PROXY_PROXY_ADDRESS: socks:1080
+      GF_SECURE_SOCKS_DATASOURCE_PROXY_ALLOW_INSECURE: 'true'
+      GF_SECURE_SOCKS_DATASOURCE_PROXY_SHOW_UI: 'true'
+    ports: !override
+      - ${BIND_ADDRESS:-127.0.0.1}:${GRAFANA_PORT:-3000}:3000/tcp
+    volumes:
+      # The passwords the seed created, read by the provisioned data sources.
+      - nexus-seed:/run/nexus:ro
+    depends_on:
+      seed:
+        condition: service_completed_successfully
+      socks:
+        condition: service_started
+
+  nexus:
+    image: ${NEXUS_IMAGE:-sonatype/nexus3:3.98.3}
+    environment:
+      # A small heap is plenty for a throwaway server.
+      INSTALL4J_ADD_VM_PARAMS: -Xms1g -Xmx1g -XX:MaxDirectMemorySize=1g -Djava.util.prefs.userRoot=/nexus-data/javaprefs
+    ports:
+      - ${BIND_ADDRESS:-127.0.0.1}:${NEXUS_PORT:-8081}:8081/tcp
+    volumes:
+      - nexus-data:/nexus-data
+    networks:
+      default:
+      # Reachable under this name only through the socks proxy: it is how the
+      # tests prove that a request went through Private data source connect.
+      private:
+        aliases:
+          - nexus-private
+    healthcheck:
+      # "writable" answers 200 once Nexus can serve requests.
+      test: ['CMD-SHELL', 'curl -fs -o /dev/null http://localhost:8081/service/rest/v1/status/writable']
+      interval: 5s
+      timeout: 5s
+      retries: 90
+      start_period: 30s
+
+  # One-shot: accepts the Community Edition licence, creates the sample
+  # repositories, artifacts and users, and writes the users' passwords.
+  seed:
+    image: ${SEED_IMAGE:-python:3.13-alpine}
+    entrypoint: ['python3', '/seed/seed.py']
+    environment:
+      NEXUS_URL: http://nexus:8081
+      NEXUS_ADMIN_PASSWORD: ${NEXUS_ADMIN_PASSWORD:-admin-dev-only}
+      SEED_OUT: /seed-out
+    volumes:
+      - ./devenv/nexus:/seed:ro
+      # For the one-time admin password Nexus generates on first start.
+      - nexus-data:/nexus-data:ro
+      - nexus-seed:/seed-out
+    depends_on:
+      nexus:
+        condition: service_healthy
+    restart: 'no'
+
+  # A plain SOCKS5 proxy on both networks (see the grafana service).
+  socks:
+    image: serjs/go-socks5-proxy:latest
+    environment:
+      REQUIRE_AUTH: 'false'
+    networks:
+      - default
+      - private
+
+  toolbox:
+    profiles: ['tools']
+    build:
+      context: devenv/toolbox
+      args:
+        UID: ${TOOLBOX_UID:-1000}
+        GID: ${TOOLBOX_GID:-1000}
+    image: nexus-datasource-toolbox:local
+    init: true
+    working_dir: /workspace
+    environment:
+      GRAFANA_URL: http://grafana:3000
+      NEXUS_URL: http://nexus:8081
+      NEXUS_SEED_DIR: /run/nexus
+      CI: ${CI:-}
+    volumes:
+      - .:/workspace
+      - node_modules:/workspace/node_modules
+      - gomod:/go/pkg/mod
+      - gobuild:/home/dev/.cache/go-build
+      - npmcache:/home/dev/.npm
+      - playwright:/ms-playwright
+      - nexus-seed:/run/nexus:ro
+
+networks:
+  private:
+    internal: true
+
+volumes:
+  nexus-data:
+  nexus-seed:
+  node_modules:
+  gomod:
+  gobuild:
+  npmcache:
+  playwright:

@@ -1,0 +1,18 @@
+{
+ "metric": "components",
+ "period": "monthly",
+ "data": [
+  {
+   "date": "2026-09",
+   "value": 410
+  },
+  {
+   "date": "2026-10",
+   "value": 455
+  },
+  {
+   "date": "2026-11",
+   "value": 512
+  }
+ ]
+}

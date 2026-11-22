@@ -1,0 +1,324 @@
+{
+  "items" : [ {
+    "id" : "cmF3LWhvc3RlZDo0ZjFiYmNkZA",
+    "repository" : "raw-hosted",
+    "format" : "raw",
+    "group" : "/tools/cli/1.1.0",
+    "name" : "/tools/cli/1.1.0/cli-1.1.0.bin",
+    "version" : "",
+    "assets" : [ {
+      "downloadUrl" : "https://nexus.example.com/repository/raw-hosted/tools/cli/1.1.0/cli-1.1.0.bin",
+      "path" : "/tools/cli/1.1.0/cli-1.1.0.bin",
+      "id" : "cmF3LWhvc3RlZDo0ZjFiYmNkZA",
+      "repository" : "raw-hosted",
+      "format" : "raw",
+      "checksum" : {
+        "md5" : "461e88a8c8e05a135adff37ffbc89e3f",
+        "sha1" : "787557d296705038906088e5cca18d41c6c4552e",
+        "sha512" : "e8a6671baba3fe3e51c292e44b21904330d8fb8fc6a61857d588d6b7b8ec218b569d23593ad37ed9ead3e479ea55783cdf1f746d331db2a67985e6246e575ca1",
+        "sha256" : "05bc954fe953374b13c940a2f57bdc9e7700e3b1b1a168abd1161503d59a3310"
+      },
+      "contentType" : "application/octet-stream",
+      "lastModified" : "2026-11-22T00:00:04.497+00:00",
+      "lastDownloaded" : "2026-11-22T00:00:05.165+00:00",
+      "uploader" : "admin",
+      "uploaderIp" : "172.17.0.1",
+      "fileSize" : 5000,
+      "blobCreated" : "2026-11-22T00:00:04.504+00:00",
+      "blobStoreName" : "default",
+      "blobUpdated" : "2026-11-22T00:00:04.497+00:00",
+      "blobRef" : "default@dc62298a-9d7f-4869-ba5c-b755901acca0@2026-11-22T00:00",
+      "lastVerified" : null,
+      "registryUrl" : null,
+      "raw" : { }
+    } ]
+  }, {
+    "id" : "cmF3LWhvc3RlZDo5ZTM3NzliYQ",
+    "repository" : "raw-hosted",
+    "format" : "raw",
+    "group" : "/tools/cli/1.2.0",
+    "name" : "/tools/cli/1.2.0/cli-1.2.0.bin",
+    "version" : "",
+    "assets" : [ {
+      "downloadUrl" : "https://nexus.example.com/repository/raw-hosted/tools/cli/1.2.0/cli-1.2.0.bin",
+      "path" : "/tools/cli/1.2.0/cli-1.2.0.bin",
+      "id" : "cmF3LWhvc3RlZDo5ZTM3NzliYQ",
+      "repository" : "raw-hosted",
+      "format" : "raw",
+      "checksum" : {
+        "md5" : "c2deb53dd247f00b2d6147c202a5943a",
+        "sha1" : "609ba749167d15467b9b47d6618018801b4bd5cb",
+        "sha512" : "153713524149d76573048f21fb3bc9851b6d0a9cb5c7bbd9d8255f6d4b303bfddeb292c4103d23a8005bbf34ef49a4f9163af2f8cfd4806283098f991a7ecd15",
+        "sha256" : "bdfb748d7bb206235f1875ca6704239b1e8dc21fbe8ceed50fa1445c51e61c32"
+      },
+      "contentType" : "application/octet-stream",
+      "lastModified" : "2026-11-22T00:00:04.561+00:00",
+      "lastDownloaded" : null,
+      "uploader" : "admin",
+      "uploaderIp" : "172.17.0.1",
+      "fileSize" : 10000,
+      "blobCreated" : "2026-11-22T00:00:04.564+00:00",
+      "blobStoreName" : "default",
+      "blobUpdated" : "2026-11-22T00:00:04.561+00:00",
+      "blobRef" : "default@9f67c457-25f4-4a4e-9efe-90cc6551e132@2026-11-22T00:00",
+      "lastVerified" : null,
+      "registryUrl" : null,
+      "raw" : { }
+    } ]
+  }, {
+    "id" : "cmF3LWhvc3RlZDplZDUzMzY5Nw",
+    "repository" : "raw-hosted",
+    "format" : "raw",
+    "group" : "/tools/cli/1.3.0",
+    "name" : "/tools/cli/1.3.0/cli-1.3.0.bin",
+    "version" : "",
+    "assets" : [ {
+      "downloadUrl" : "https://nexus.example.com/repository/raw-hosted/tools/cli/1.3.0/cli-1.3.0.bin",
+      "path" : "/tools/cli/1.3.0/cli-1.3.0.bin",
+      "id" : "cmF3LWhvc3RlZDplZDUzMzY5Nw",
+      "repository" : "raw-hosted",
+      "format" : "raw",
+      "checksum" : {
+        "md5" : "b9bdfcb43c896e260db47e3e819ec501",
+        "sha1" : "8eaf95a880d2d2619088bc0ae5f24b769fc94c3e",
+        "sha512" : "7ffc13a748c4e67c264c9bf8b631ca13dbd3dabcfc658351cae9e0f46b24154c2a36b98f326650559971436847a4356a6922931528f8a47e21a157d832fe0d00",
+        "sha256" : "0a5c2e8df7afc1e84e3a4687ce0784c40b535767b28e3fce98db5fe775b7c9cc"
+      },
+      "contentType" : "application/octet-stream",
+      "lastModified" : "2026-11-22T00:00:04.607+00:00",
+      "lastDownloaded" : null,
+      "uploader" : "admin",
+      "uploaderIp" : "172.17.0.1",
+      "fileSize" : 15000,
+      "blobCreated" : "2026-11-22T00:00:04.610+00:00",
+      "blobStoreName" : "default",
+      "blobUpdated" : "2026-11-22T00:00:04.607+00:00",
+      "blobRef" : "default@4a9cb4b4-e6e9-4ae1-a2c7-f350195c4766@2026-11-22T00:00",
+      "lastVerified" : null,
+      "registryUrl" : null,
+      "raw" : { }
+    } ]
+  }, {
+    "id" : "bWF2ZW4tcmVsZWFzZXM6NGYxYmJjZGQ",
+    "repository" : "maven-releases",
+    "format" : "maven2",
+    "group" : "com.example",
+    "name" : "billing",
+    "version" : "1.0.0",
+    "assets" : [ {
+      "downloadUrl" : "https://nexus.example.com/repository/maven-releases/com/example/billing/1.0.0/billing-1.0.0.pom",
+      "path" : "/com/example/billing/1.0.0/billing-1.0.0.pom",
+      "id" : "bWF2ZW4tcmVsZWFzZXM6NGYxYmJjZGQ",
+      "repository" : "maven-releases",
+      "format" : "maven2",
+      "checksum" : {
+        "sha1" : "255a26039ccc09c912ec3aae9badf265fec04412",
+        "md5" : "ce9e0b2d3601f5fec50c6008374b1da7",
+        "sha512" : "4d46bc9ad18f11c85b7ae73aaef86efabd5212282546979155ccd17b1e07cd8ed6050fe8f4accd641d428ec271ff55460c0bcb77a741c14eab9ef054cd0decda",
+        "sha256" : "396c4a5c21d3dfa6a976889c0c3b79456b605c3ec9429d9c2389dcc51ba2a235"
+      },
+      "contentType" : "application/xml",
+      "lastModified" : "2026-11-22T00:00:04.706+00:00",
+      "lastDownloaded" : null,
+      "uploader" : "admin",
+      "uploaderIp" : "172.17.0.1",
+      "fileSize" : 140,
+      "blobCreated" : "2026-11-22T00:00:04.709+00:00",
+      "blobStoreName" : "default",
+      "blobUpdated" : "2026-11-22T00:00:04.706+00:00",
+      "blobRef" : "default@3bc2f36d-c046-4a55-bcd5-c8ce492d8931@2026-11-22T00:00",
+      "lastVerified" : null,
+      "registryUrl" : null,
+      "maven2" : {
+        "extension" : "pom",
+        "artifactId" : "billing",
+        "version" : "1.0.0",
+        "groupId" : "com.example"
+      }
+    }, {
+      "downloadUrl" : "https://nexus.example.com/repository/maven-releases/com/example/billing/1.0.0/billing-1.0.0.jar",
+      "path" : "/com/example/billing/1.0.0/billing-1.0.0.jar",
+      "id" : "bWF2ZW4tcmVsZWFzZXM6OWUzNzc5YmE",
+      "repository" : "maven-releases",
+      "format" : "maven2",
+      "checksum" : {
+        "sha1" : "787557d296705038906088e5cca18d41c6c4552e",
+        "md5" : "461e88a8c8e05a135adff37ffbc89e3f",
+        "sha512" : "e8a6671baba3fe3e51c292e44b21904330d8fb8fc6a61857d588d6b7b8ec218b569d23593ad37ed9ead3e479ea55783cdf1f746d331db2a67985e6246e575ca1",
+        "sha256" : "05bc954fe953374b13c940a2f57bdc9e7700e3b1b1a168abd1161503d59a3310"
+      },
+      "contentType" : "application/java-archive",
+      "lastModified" : "2026-11-22T00:00:04.750+00:00",
+      "lastDownloaded" : null,
+      "uploader" : "admin",
+      "uploaderIp" : "172.17.0.1",
+      "fileSize" : 5000,
+      "blobCreated" : "2026-11-22T00:00:04.753+00:00",
+      "blobStoreName" : "default",
+      "blobUpdated" : "2026-11-22T00:00:04.750+00:00",
+      "blobRef" : "default@b9f12d6b-6958-4228-83bc-456ccd571b44@2026-11-22T00:00",
+      "lastVerified" : null,
+      "registryUrl" : null,
+      "maven2" : {
+        "extension" : "jar",
+        "artifactId" : "billing",
+        "version" : "1.0.0",
+        "groupId" : "com.example"
+      }
+    } ]
+  }, {
+    "id" : "bWF2ZW4tcmVsZWFzZXM6ZWQ1MzM2OTc",
+    "repository" : "maven-releases",
+    "format" : "maven2",
+    "group" : "com.example",
+    "name" : "billing",
+    "version" : "1.1.0",
+    "assets" : [ {
+      "downloadUrl" : "https://nexus.example.com/repository/maven-releases/com/example/billing/1.1.0/billing-1.1.0.jar",
+      "path" : "/com/example/billing/1.1.0/billing-1.1.0.jar",
+      "id" : "bWF2ZW4tcmVsZWFzZXM6M2M2ZWYzNzQ",
+      "repository" : "maven-releases",
+      "format" : "maven2",
+      "checksum" : {
+        "sha1" : "609ba749167d15467b9b47d6618018801b4bd5cb",
+        "md5" : "c2deb53dd247f00b2d6147c202a5943a",
+        "sha512" : "153713524149d76573048f21fb3bc9851b6d0a9cb5c7bbd9d8255f6d4b303bfddeb292c4103d23a8005bbf34ef49a4f9163af2f8cfd4806283098f991a7ecd15",
+        "sha256" : "bdfb748d7bb206235f1875ca6704239b1e8dc21fbe8ceed50fa1445c51e61c32"
+      },
+      "contentType" : "application/java-archive",
+      "lastModified" : "2026-11-22T00:09:41.608+00:00",
+      "lastDownloaded" : null,
+      "uploader" : "admin",
+      "uploaderIp" : "172.17.0.1",
+      "fileSize" : 10000,
+      "blobCreated" : "2026-11-22T00:09:41.610+00:00",
+      "blobStoreName" : "default",
+      "blobUpdated" : "2026-11-22T00:09:41.608+00:00",
+      "blobRef" : "default@ced8d7e9-e9f3-4feb-a40b-747551a27d43@2026-11-22T00:09",
+      "lastVerified" : null,
+      "registryUrl" : null,
+      "maven2" : {
+        "extension" : "jar",
+        "artifactId" : "billing",
+        "version" : "1.1.0",
+        "groupId" : "com.example"
+      }
+    } ]
+  }, {
+    "id" : "bWF2ZW4tcmVsZWFzZXM6M2M2ZWYzNzQ",
+    "repository" : "maven-releases",
+    "format" : "maven2",
+    "group" : "com.example",
+    "name" : "billing",
+    "version" : "1.2.0",
+    "assets" : [ {
+      "downloadUrl" : "https://nexus.example.com/repository/maven-releases/com/example/billing/1.2.0/billing-1.2.0.jar",
+      "path" : "/com/example/billing/1.2.0/billing-1.2.0.jar",
+      "id" : "bWF2ZW4tcmVsZWFzZXM6OGI4YWIwNTE",
+      "repository" : "maven-releases",
+      "format" : "maven2",
+      "checksum" : {
+        "sha1" : "609ba749167d15467b9b47d6618018801b4bd5cb",
+        "md5" : "c2deb53dd247f00b2d6147c202a5943a",
+        "sha512" : "153713524149d76573048f21fb3bc9851b6d0a9cb5c7bbd9d8255f6d4b303bfddeb292c4103d23a8005bbf34ef49a4f9163af2f8cfd4806283098f991a7ecd15",
+        "sha256" : "bdfb748d7bb206235f1875ca6704239b1e8dc21fbe8ceed50fa1445c51e61c32"
+      },
+      "contentType" : "application/java-archive",
+      "lastModified" : "2026-11-22T00:09:41.636+00:00",
+      "lastDownloaded" : null,
+      "uploader" : "admin",
+      "uploaderIp" : "172.17.0.1",
+      "fileSize" : 10000,
+      "blobCreated" : "2026-11-22T00:09:41.637+00:00",
+      "blobStoreName" : "default",
+      "blobUpdated" : "2026-11-22T00:09:41.636+00:00",
+      "blobRef" : "default@40a648fe-b5c0-49f5-912d-a93a40bdaed4@2026-11-22T00:09",
+      "lastVerified" : null,
+      "registryUrl" : null,
+      "maven2" : {
+        "extension" : "jar",
+        "artifactId" : "billing",
+        "version" : "1.2.0",
+        "groupId" : "com.example"
+      }
+    } ]
+  }, {
+    "id" : "bWF2ZW4tcmVsZWFzZXM6OGI4YWIwNTE",
+    "repository" : "maven-releases",
+    "format" : "maven2",
+    "group" : "com.example",
+    "name" : "checkout",
+    "version" : "2.0.0",
+    "assets" : [ {
+      "downloadUrl" : "https://nexus.example.com/repository/maven-releases/com/example/checkout/2.0.0/checkout-2.0.0.jar",
+      "path" : "/com/example/checkout/2.0.0/checkout-2.0.0.jar",
+      "id" : "bWF2ZW4tcmVsZWFzZXM6ZGFhNjZkMmU",
+      "repository" : "maven-releases",
+      "format" : "maven2",
+      "checksum" : {
+        "sha1" : "8eaf95a880d2d2619088bc0ae5f24b769fc94c3e",
+        "md5" : "b9bdfcb43c896e260db47e3e819ec501",
+        "sha512" : "7ffc13a748c4e67c264c9bf8b631ca13dbd3dabcfc658351cae9e0f46b24154c2a36b98f326650559971436847a4356a6922931528f8a47e21a157d832fe0d00",
+        "sha256" : "0a5c2e8df7afc1e84e3a4687ce0784c40b535767b28e3fce98db5fe775b7c9cc"
+      },
+      "contentType" : "application/java-archive",
+      "lastModified" : "2026-11-22T00:09:41.661+00:00",
+      "lastDownloaded" : null,
+      "uploader" : "admin",
+      "uploaderIp" : "172.17.0.1",
+      "fileSize" : 15000,
+      "blobCreated" : "2026-11-22T00:09:41.663+00:00",
+      "blobStoreName" : "default",
+      "blobUpdated" : "2026-11-22T00:09:41.661+00:00",
+      "blobRef" : "default@b21ff516-1ebc-4402-917c-178085e882ab@2026-11-22T00:09",
+      "lastVerified" : null,
+      "registryUrl" : null,
+      "maven2" : {
+        "extension" : "jar",
+        "artifactId" : "checkout",
+        "version" : "2.0.0",
+        "groupId" : "com.example"
+      }
+    } ]
+  }, {
+    "id" : "bWF2ZW4tY2VudHJhbDo5ZTM3NzliYQ",
+    "repository" : "maven-central",
+    "format" : "maven2",
+    "group" : "junit",
+    "name" : "junit",
+    "version" : "4.13.2",
+    "assets" : [ {
+      "downloadUrl" : "https://nexus.example.com/repository/maven-central/junit/junit/4.13.2/junit-4.13.2.pom",
+      "path" : "/junit/junit/4.13.2/junit-4.13.2.pom",
+      "id" : "bWF2ZW4tY2VudHJhbDplZDUzMzY5Nw",
+      "repository" : "maven-central",
+      "format" : "maven2",
+      "checksum" : {
+        "sha1" : "73bc5be628edeb297a1caf421a5a2e494798b92f",
+        "md5" : "7583ceadd9fed45e4da9f69e1abd4ba3",
+        "sha512" : "abf1cf90ab6a525ae0cfa5235563b00bc6ef07c59f8cdd5c5495ea8b14941b5803a3f7adffaa36ec37152a7904a10e04939c0d11b48115f1943a1606cc5066c0",
+        "sha256" : "569b6977ee4603c965c1c46c3058fa6e969291b0160eb6964dd092cd89eadd94"
+      },
+      "contentType" : "application/xml",
+      "lastModified" : "2026-11-22T00:00:05.072+00:00",
+      "lastDownloaded" : "2026-11-22T00:00:05.074+00:00",
+      "uploader" : "admin",
+      "uploaderIp" : "172.17.0.1",
+      "fileSize" : 27018,
+      "blobCreated" : "2026-11-22T00:00:05.074+00:00",
+      "blobStoreName" : "default",
+      "blobUpdated" : "2026-11-22T00:00:05.072+00:00",
+      "blobRef" : "default@a096653b-65ff-4700-a2e2-c3e915ea12ae@2026-11-22T00:00",
+      "lastVerified" : "2026-11-22T00:00:04.927+00:00",
+      "registryUrl" : null,
+      "maven2" : {
+        "extension" : "pom",
+        "artifactId" : "junit",
+        "version" : "4.13.2",
+        "groupId" : "junit"
+      }
+    } ]
+  } ],
+  "continuationToken" : null,
+  "total" : 8
+}

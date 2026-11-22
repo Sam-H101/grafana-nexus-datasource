@@ -1,0 +1,79 @@
+{
+  "items" : [ {
+    "downloadUrl" : "https://nexus.example.com/repository/raw-hosted/tools/cli/1.1.0/cli-1.1.0.bin",
+    "path" : "/tools/cli/1.1.0/cli-1.1.0.bin",
+    "id" : "cmF3LWhvc3RlZDo0ZjFiYmNkZA",
+    "repository" : "raw-hosted",
+    "format" : "raw",
+    "checksum" : {
+      "md5" : "461e88a8c8e05a135adff37ffbc89e3f",
+      "sha1" : "787557d296705038906088e5cca18d41c6c4552e",
+      "sha512" : "e8a6671baba3fe3e51c292e44b21904330d8fb8fc6a61857d588d6b7b8ec218b569d23593ad37ed9ead3e479ea55783cdf1f746d331db2a67985e6246e575ca1",
+      "sha256" : "05bc954fe953374b13c940a2f57bdc9e7700e3b1b1a168abd1161503d59a3310"
+    },
+    "contentType" : "application/octet-stream",
+    "lastModified" : "2026-11-22T00:00:04.497+00:00",
+    "lastDownloaded" : "2026-11-22T00:00:05.165+00:00",
+    "uploader" : "admin",
+    "uploaderIp" : "172.17.0.1",
+    "fileSize" : 5000,
+    "blobCreated" : "2026-11-22T00:00:04.504+00:00",
+    "blobStoreName" : "default",
+    "blobUpdated" : "2026-11-22T00:00:04.497+00:00",
+    "blobRef" : "default@dc62298a-9d7f-4869-ba5c-b755901acca0@2026-11-22T00:00",
+    "lastVerified" : null,
+    "registryUrl" : null,
+    "raw" : { }
+  }, {
+    "downloadUrl" : "https://nexus.example.com/repository/raw-hosted/tools/cli/1.2.0/cli-1.2.0.bin",
+    "path" : "/tools/cli/1.2.0/cli-1.2.0.bin",
+    "id" : "cmF3LWhvc3RlZDo5ZTM3NzliYQ",
+    "repository" : "raw-hosted",
+    "format" : "raw",
+    "checksum" : {
+      "md5" : "c2deb53dd247f00b2d6147c202a5943a",
+      "sha1" : "609ba749167d15467b9b47d6618018801b4bd5cb",
+      "sha512" : "153713524149d76573048f21fb3bc9851b6d0a9cb5c7bbd9d8255f6d4b303bfddeb292c4103d23a8005bbf34ef49a4f9163af2f8cfd4806283098f991a7ecd15",
+      "sha256" : "bdfb748d7bb206235f1875ca6704239b1e8dc21fbe8ceed50fa1445c51e61c32"
+    },
+    "contentType" : "application/octet-stream",
+    "lastModified" : "2026-11-22T00:00:04.561+00:00",
+    "lastDownloaded" : null,
+    "uploader" : "admin",
+    "uploaderIp" : "172.17.0.1",
+    "fileSize" : 10000,
+    "blobCreated" : "2026-11-22T00:00:04.564+00:00",
+    "blobStoreName" : "default",
+    "blobUpdated" : "2026-11-22T00:00:04.561+00:00",
+    "blobRef" : "default@9f67c457-25f4-4a4e-9efe-90cc6551e132@2026-11-22T00:00",
+    "lastVerified" : null,
+    "registryUrl" : null,
+    "raw" : { }
+  }, {
+    "downloadUrl" : "https://nexus.example.com/repository/raw-hosted/tools/cli/1.3.0/cli-1.3.0.bin",
+    "path" : "/tools/cli/1.3.0/cli-1.3.0.bin",
+    "id" : "cmF3LWhvc3RlZDplZDUzMzY5Nw",
+    "repository" : "raw-hosted",
+    "format" : "raw",
+    "checksum" : {
+      "md5" : "b9bdfcb43c896e260db47e3e819ec501",
+      "sha1" : "8eaf95a880d2d2619088bc0ae5f24b769fc94c3e",
+      "sha512" : "7ffc13a748c4e67c264c9bf8b631ca13dbd3dabcfc658351cae9e0f46b24154c2a36b98f326650559971436847a4356a6922931528f8a47e21a157d832fe0d00",
+      "sha256" : "0a5c2e8df7afc1e84e3a4687ce0784c40b535767b28e3fce98db5fe775b7c9cc"
+    },
+    "contentType" : "application/octet-stream",
+    "lastModified" : "2026-11-22T00:00:04.607+00:00",
+    "lastDownloaded" : null,
+    "uploader" : "admin",
+    "uploaderIp" : "172.17.0.1",
+    "fileSize" : 15000,
+    "blobCreated" : "2026-11-22T00:00:04.610+00:00",
+    "blobStoreName" : "default",
+    "blobUpdated" : "2026-11-22T00:00:04.607+00:00",
+    "blobRef" : "default@4a9cb4b4-e6e9-4ae1-a2c7-f350195c4766@2026-11-22T00:00",
+    "lastVerified" : null,
+    "registryUrl" : null,
+    "raw" : { }
+  } ],
+  "continuationToken" : null
+}

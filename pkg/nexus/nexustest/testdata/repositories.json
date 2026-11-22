@@ -1,0 +1,93 @@
+[ {
+  "name" : "maven-releases",
+  "format" : "maven2",
+  "type" : "hosted",
+  "url" : "https://nexus.example.com/repository/maven-releases",
+  "online" : true,
+  "size" : 0,
+  "attributes" : { }
+}, {
+  "name" : "maven-snapshots",
+  "format" : "maven2",
+  "type" : "hosted",
+  "url" : "https://nexus.example.com/repository/maven-snapshots",
+  "online" : true,
+  "size" : 0,
+  "attributes" : { }
+}, {
+  "name" : "maven-central",
+  "format" : "maven2",
+  "type" : "proxy",
+  "url" : "https://nexus.example.com/repository/maven-central",
+  "online" : true,
+  "size" : 0,
+  "attributes" : {
+    "proxy" : {
+      "remoteUrl" : "https://repo1.maven.org/maven2/"
+    }
+  }
+}, {
+  "name" : "maven-public",
+  "format" : "maven2",
+  "type" : "group",
+  "url" : "https://nexus.example.com/repository/maven-public",
+  "online" : true,
+  "size" : 0,
+  "attributes" : { }
+}, {
+  "name" : "nuget-hosted",
+  "format" : "nuget",
+  "type" : "hosted",
+  "url" : "https://nexus.example.com/repository/nuget-hosted",
+  "online" : true,
+  "size" : 0,
+  "attributes" : { }
+}, {
+  "name" : "nuget.org-proxy",
+  "format" : "nuget",
+  "type" : "proxy",
+  "url" : "https://nexus.example.com/repository/nuget.org-proxy",
+  "online" : true,
+  "size" : 0,
+  "attributes" : {
+    "proxy" : {
+      "remoteUrl" : "https://api.nuget.org/v3/index.json"
+    }
+  }
+}, {
+  "name" : "nuget-group",
+  "format" : "nuget",
+  "type" : "group",
+  "url" : "https://nexus.example.com/repository/nuget-group",
+  "online" : true,
+  "size" : 0,
+  "attributes" : { }
+}, {
+  "name" : "raw-hosted",
+  "format" : "raw",
+  "type" : "hosted",
+  "url" : "https://nexus.example.com/repository/raw-hosted",
+  "online" : true,
+  "size" : 0,
+  "attributes" : { }
+}, {
+  "name" : "docs-archive",
+  "format" : "raw",
+  "type" : "hosted",
+  "url" : "https://nexus.example.com/repository/docs-archive",
+  "online" : false,
+  "size" : 0,
+  "attributes" : { }
+}, {
+  "name" : "npm-proxy",
+  "format" : "npm",
+  "type" : "proxy",
+  "url" : "https://nexus.example.com/repository/npm-proxy",
+  "online" : true,
+  "size" : 0,
+  "attributes" : {
+    "proxy" : {
+      "remoteUrl" : "https://registry.npmjs.org"
+    }
+  }
+} ]

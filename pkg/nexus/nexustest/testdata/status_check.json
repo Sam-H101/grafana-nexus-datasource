@@ -1,0 +1,173 @@
+{
+  "Available CPUs" : {
+    "healthy" : true,
+    "message" : "The host system is allocating a maximum of 8 cores to the application.",
+    "error" : null,
+    "details" : null,
+    "time" : 1795306198754,
+    "duration" : 0,
+    "timestamp" : "2026-11-22T00:09:58.754Z"
+  },
+  "Baseline Telemetry" : {
+    "healthy" : false,
+    "message" : "Baseline Telemetry status: Not acknowledged. Mandatory telemetry acknowledgement was not received.",
+    "error" : null,
+    "details" : null,
+    "time" : 1795306198754,
+    "duration" : 0,
+    "timestamp" : "2026-11-22T00:09:58.754Z"
+  },
+  "Blob Stores Quota" : {
+    "healthy" : true,
+    "message" : "0/2 blob stores violating their quota<br>",
+    "error" : null,
+    "details" : null,
+    "time" : 1795306198755,
+    "duration" : 0,
+    "timestamp" : "2026-11-22T00:09:58.755Z"
+  },
+  "Blob Stores Ready" : {
+    "healthy" : true,
+    "message" : "0/2 blob stores report issues<br>",
+    "error" : null,
+    "details" : null,
+    "time" : 1795306198741,
+    "duration" : 0,
+    "timestamp" : "2026-11-22T00:09:58.741Z"
+  },
+  "Default Admin Credentials" : {
+    "healthy" : true,
+    "message" : null,
+    "error" : null,
+    "details" : null,
+    "time" : 1795306198754,
+    "duration" : 11,
+    "timestamp" : "2026-11-22T00:09:58.754Z"
+  },
+  "Default Secret Encryption Key" : {
+    "healthy" : false,
+    "message" : "Nexus was not configured with an encryption key and is using the Default key.",
+    "error" : null,
+    "details" : null,
+    "time" : 1795306198754,
+    "duration" : 0,
+    "timestamp" : "2026-11-22T00:09:58.754Z"
+  },
+  "DefaultRoleRealm" : {
+    "healthy" : true,
+    "message" : "Default Role Realm not in use.",
+    "error" : null,
+    "details" : null,
+    "time" : 1795306198755,
+    "duration" : 0,
+    "timestamp" : "2026-11-22T00:09:58.755Z"
+  },
+  "ECR Token Freshness" : {
+    "healthy" : true,
+    "message" : "No ECR tokens to check.",
+    "error" : null,
+    "details" : null,
+    "time" : 1795306198740,
+    "duration" : 0,
+    "timestamp" : "2026-11-22T00:09:58.740Z"
+  },
+  "File Blob Stores Path" : {
+    "healthy" : true,
+    "message" : null,
+    "error" : null,
+    "details" : null,
+    "time" : 1795306198755,
+    "duration" : 0,
+    "timestamp" : "2026-11-22T00:09:58.755Z"
+  },
+  "Google Cloud Blob Stores" : {
+    "healthy" : true,
+    "message" : "0 Google Cloud Blob Store(s) are nominal",
+    "error" : null,
+    "details" : null,
+    "time" : 1795306198742,
+    "duration" : 0,
+    "timestamp" : "2026-11-22T00:09:58.742Z"
+  },
+  "Node Health Check" : {
+    "healthy" : true,
+    "message" : "Only a single non-clustered node is connected to your database.",
+    "error" : null,
+    "details" : null,
+    "time" : 1795306198741,
+    "duration" : 0,
+    "timestamp" : "2026-11-22T00:09:58.741Z"
+  },
+  "NuGet V2 repositories" : {
+    "healthy" : true,
+    "message" : "No NuGet version 2 repositories found.",
+    "error" : null,
+    "details" : null,
+    "time" : 1795306198740,
+    "duration" : 0,
+    "timestamp" : "2026-11-22T00:09:58.740Z"
+  },
+  "Pending Upgrade Tasks" : {
+    "healthy" : true,
+    "message" : "No upgrade tasks older than PT24H",
+    "error" : null,
+    "details" : null,
+    "time" : 1795305562467,
+    "duration" : 0,
+    "timestamp" : "2026-11-21T23:59:22.467Z"
+  },
+  "Re-encryption required" : {
+    "healthy" : true,
+    "message" : "All secrets using same encryption key. Re-encryption is not required.",
+    "error" : null,
+    "details" : null,
+    "time" : 1795306198756,
+    "duration" : 0,
+    "timestamp" : "2026-11-22T00:09:58.756Z"
+  },
+  "Recent version" : {
+    "healthy" : true,
+    "message" : null,
+    "error" : null,
+    "details" : null,
+    "time" : 1795306198742,
+    "duration" : 0,
+    "timestamp" : "2026-11-22T00:09:58.742Z"
+  },
+  "Recommended Limits for H2" : {
+    "healthy" : true,
+    "message" : "<b>Total Components:</b> 5 / 100,000 - <b>Status:</b> Below Limit <br><b>Requests per Day:</b> 0 / 20,000 - <b>Status:</b> Below Limit <br><b>Note:</b> Consider migrating to PostgreSQL to ensure optimal performance.",
+    "error" : null,
+    "details" : null,
+    "time" : 1795306198756,
+    "duration" : 1,
+    "timestamp" : "2026-11-22T00:09:58.756Z"
+  },
+  "Scheduler" : {
+    "healthy" : true,
+    "message" : null,
+    "error" : null,
+    "details" : null,
+    "time" : 1795306198742,
+    "duration" : 1,
+    "timestamp" : "2026-11-22T00:09:58.742Z"
+  },
+  "Scripting" : {
+    "healthy" : true,
+    "message" : "Scripting is disabled.",
+    "error" : null,
+    "details" : null,
+    "time" : 1795306198754,
+    "duration" : 0,
+    "timestamp" : "2026-11-22T00:09:58.754Z"
+  },
+  "com.codahale.metrics.health.jvm.ThreadDeadlockHealthCheck" : {
+    "healthy" : true,
+    "message" : null,
+    "error" : null,
+    "details" : null,
+    "time" : 1795306198741,
+    "duration" : 0,
+    "timestamp" : "2026-11-22T00:09:58.741Z"
+  }
+}
